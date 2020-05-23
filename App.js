@@ -7,17 +7,19 @@ import PropsDinamis from './src/PropsDinamis';
 import StateDinamis from './src/StateDinamis';
 import Comunication from './src/comunications/Comunication';
 
+import {NavigationContainer} from '@react-navigation/native';
+
 export default function App() {
   return (
-    <View>
+    <NavigationContainer>
       <ScrollView>
-        {/* <ContohComponents />
-        <StyleBasic /> */}
-        {/* <FlexBox /> */}
-        {/* <PropsDinamis /> */}
-        {/* <StateDinamis /> */}
+        <ContohComponents />
+        <StyleBasic />
+        <FlexBox />
+        <PropsDinamis />
+        <StateDinamis />
         <Comunication />
       </ScrollView>
-    </View>
+    </NavigationContainer>
   );
 }
