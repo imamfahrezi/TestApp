@@ -3,6 +3,7 @@ import {View, ScrollView} from 'react-native';
 import ContohComponents from './src/ContohComponents';
 import StyleBasic from './src/StyleBasic';
 import FlexBox from './src/FlexBox';
+import PropsDinamis from './src/PropsDinamis';
 
 export default function App() {
   return (
@@ -10,7 +11,8 @@ export default function App() {
       <ScrollView>
         {/* <ContohComponents />
         <StyleBasic /> */}
-        <FlexBox />
+        {/* <FlexBox /> */}
+        <PropsDinamis />
       </ScrollView>
     </View>
   );
