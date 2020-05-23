@@ -4,6 +4,7 @@ import ContohComponents from './src/ContohComponents';
 import StyleBasic from './src/StyleBasic';
 import FlexBox from './src/FlexBox';
 import PropsDinamis from './src/PropsDinamis';
+import StateDinamis from './src/StateDinamis';
 
 export default function App() {
   return (
@@ -12,7 +13,8 @@ export default function App() {
         {/* <ContohComponents />
         <StyleBasic /> */}
         {/* <FlexBox /> */}
-        <PropsDinamis />
+        {/* <PropsDinamis /> */}
+        <StateDinamis />
       </ScrollView>
     </View>
   );
