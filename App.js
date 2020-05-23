@@ -5,6 +5,7 @@ import StyleBasic from './src/StyleBasic';
 import FlexBox from './src/FlexBox';
 import PropsDinamis from './src/PropsDinamis';
 import StateDinamis from './src/StateDinamis';
+import Comunication from './src/comunications/Comunication';
 
 export default function App() {
   return (
@@ -14,7 +15,8 @@ export default function App() {
         <StyleBasic /> */}
         {/* <FlexBox /> */}
         {/* <PropsDinamis /> */}
-        <StateDinamis />
+        {/* <StateDinamis /> */}
+        <Comunication />
       </ScrollView>
     </View>
   );
