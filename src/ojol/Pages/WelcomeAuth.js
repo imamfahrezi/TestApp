@@ -1,10 +1,12 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View} from 'react-native';
+import {ActionButton} from '../../components/Button';
 
 const WelcomeAuth = () => {
   return (
-    <View>
-      <Text>WelcomeAuth</Text>
+    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+      <ActionButton title="MASUK" />
+      <ActionButton title="DAFTAR" />
     </View>
   );
 };

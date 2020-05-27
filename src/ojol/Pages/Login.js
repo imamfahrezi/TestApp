@@ -1,10 +1,13 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Button} from 'react-native';
 
-const Login = () => {
+const Login = ({navigation}) => {
   return (
-    <View>
-      <Text>Login</Text>
+    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+      <Button
+        title="Go to Register"
+        onPress={() => navigation.push('Register')}
+      />
     </View>
   );
 };
