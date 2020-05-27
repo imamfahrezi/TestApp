@@ -2,7 +2,7 @@ import React from 'react';
 import {Text, View} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 
-export const ActionButton = ({title}) => {
+export const ActionButton = ({title, onPress}) => {
   return (
     <View
       style={{
@@ -14,7 +14,7 @@ export const ActionButton = ({title}) => {
         alignItems: 'center',
         marginBottom: 30,
       }}>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={onPress}>
         <Text>{title}</Text>
       </TouchableOpacity>
     </View>
