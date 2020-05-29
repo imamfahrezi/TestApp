@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, TextInput} from 'react-native';
 
-const Form = ({placeholder}) => {
+const Form = ({placeholder, ...rest}) => {
   return (
     <TextInput
       style={{
@@ -10,6 +10,7 @@ const Form = ({placeholder}) => {
         borderRadius: 30,
         paddingHorizontal: 20,
       }}
+      {...rest}
       placeholder={placeholder}
     />
   );
