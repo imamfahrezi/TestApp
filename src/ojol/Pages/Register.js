@@ -1,10 +1,22 @@
 import React from 'react';
-import {View, Button} from 'react-native';
+import {View, Button, Text} from 'react-native';
+import Form from '../../components/Form';
 
 const Register = ({navigation}) => {
   return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      {/* <Button title="Home Screen" onPress={() => navigation.push('Home')} /> */}
+    <View style={{flex: 1, padding: 20, justifyContent: 'center'}}>
+      <Text
+        style={{
+          textAlign: 'center',
+          marginBottom: 20,
+          fontSize: 20,
+          fontWeight: 'bold',
+        }}>
+        REGISTER
+      </Text>
+      <Form placeholder="name" />
+      <Form placeholder="email" />
+      <Form placeholder="password" />
     </View>
   );
 };
