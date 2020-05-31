@@ -1,8 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import {View, Button, Text} from 'react-native';
 import Form from '../../components/Form';
+import {useSelector} from 'react-redux';
 
 const Register = ({navigation}) => {
+  // memanggil store
+  const globalState = useSelector(state => state);
   const [FormData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -27,7 +30,7 @@ const Register = ({navigation}) => {
           fontSize: 20,
           fontWeight: 'bold',
         }}>
-        REGISTER
+        REGISTER {globalState.name}
       </Text>
       <Form
         placeholder="name"

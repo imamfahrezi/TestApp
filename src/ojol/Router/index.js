@@ -5,6 +5,7 @@ const Stack = createStackNavigator();
 
 const Router = () => {
   return (
+    // initialRouteName="Register" untuk tetap di halaman register saat refresh
     <Stack.Navigator initialRouteName="Register">
       <Stack.Screen name="Splash" component={Splash} />
       <Stack.Screen name="Login" component={Login} />
