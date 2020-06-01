@@ -5,7 +5,7 @@ import {useSelector} from 'react-redux';
 
 const Register = ({navigation}) => {
   // memanggil store
-  const globalState = useSelector(state => state);
+  const RegisterReducer = useSelector(state => state.RegisterReducer);
   const [FormData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -30,7 +30,7 @@ const Register = ({navigation}) => {
           fontSize: 20,
           fontWeight: 'bold',
         }}>
-        REGISTER {globalState.name}
+        REGISTER {RegisterReducer.title}
       </Text>
       <Form
         placeholder="name"
