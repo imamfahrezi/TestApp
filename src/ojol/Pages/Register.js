@@ -1,25 +1,29 @@
 import React, {useEffect, useState} from 'react';
 import {View, Button, Text} from 'react-native';
 import Form from '../../components/Form';
-import {useSelector} from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
+import {setForm} from '../redux';
 
 const Register = ({navigation}) => {
   // memanggil store
   const RegisterReducer = useSelector(state => state.RegisterReducer);
-  const [FormData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    password: '',
-  });
+
+  const dispatch = useDispatch();
+  // const [FormData, setFormData] = useState({
+  // fullName: '',
+  // email: '',
+  // password: '',
+  // });
   const sendData = () => {
-    console.log('kirim data', FormData);
+    console.log('kirim data', RegisterReducer.form);
   };
 
-  const onInputChange = (value, input) => {
-    setFormData({
-      ...FormData,
-      [input]: value,
-    });
+  const onInputChange = (value, inputType) => {
+    // setFormData({
+    //   ...FormData,
+    //   [input]: value,
+    // });
+    dispatch(setForm(inputType, value));
   };
   return (
     <View style={{flex: 1, padding: 20, justifyContent: 'center'}}>
@@ -34,17 +38,17 @@ const Register = ({navigation}) => {
       </Text>
       <Form
         placeholder="name"
-        value={FormData.fullName}
+        value={RegisterReducer.fullName}
         onChangeText={value => onInputChange(value, 'fullName')}
       />
       <Form
         placeholder="email"
-        value={FormData.email}
+        value={RegisterReducer.email}
         onChangeText={value => onInputChange(value, 'email')}
       />
       <Form
         placeholder="password"
-        value={FormData.password}
+        value={RegisterReducer.password}
         onChangeText={value => onInputChange(value, 'password')}
         secureTextEntry={true}
       />

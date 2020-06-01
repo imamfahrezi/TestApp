@@ -5,6 +5,11 @@ const initialState = {
 };
 
 const initialStateRegister = {
+  form: {
+    fullName: '',
+    email: '',
+    password: '',
+  },
   title: 'register page',
   desc: 'ini adalah decs register',
 };
@@ -15,6 +20,21 @@ const initialStateLogin = {
 };
 
 const RegisterReducer = (state = initialStateRegister, action) => {
+  if (action.type === 'SET_TITLE') {
+    return {
+      ...state,
+      title: 'Register Ganti title',
+    };
+  }
+  if (action.type === 'SET_FORM') {
+    return {
+      ...state,
+      form: {
+        ...state.form,
+        [action.inputType]: action.inputValue,
+      },
+    };
+  }
   return state;
 };
 
