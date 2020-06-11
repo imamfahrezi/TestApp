@@ -1,8 +1,12 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
+import ButtonIcon from './ButtonIcon';
 
-export const ActionButton = ({title, onPress}) => {
+export const ActionButton = ({title, onPress, type, name}) => {
+  if (type === 'icon') {
+    <ButtonIcon name="back" onPress={onPress} />;
+  }
   return (
     <View
       style={{

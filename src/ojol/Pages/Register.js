@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {View, Button, Text} from 'react-native';
 import Form from '../../components/Form';
 import {useSelector, useDispatch} from 'react-redux';
